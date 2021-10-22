@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="'/overview'" style="color:white;">Technikum Book Club</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+       <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+             <a  (click)="message()"class="nav-link">Buch konfigurieren<span class="sr-only">(current)</span></a>
+          </li>
+          <li *ngIf="user?.userType==='Lektor'" class="nav-item active">
+            <a (click)="message()" class="nav-link">Fächer konfiguration<span class="sr-only">(current)</span></a>
+         </li>
+         <li *ngIf="user?.userType==='Student'" class="nav-item active">
+            <a (click)="message()" class="nav-link">Studiengang konfigurieren<span class="sr-only">(current)</span></a>
+         </li>
+         <li   class="nav-item active">
+            <a (click)="resetUser()" [routerLink]="'/login'" class="nav-link">Logout<span class="sr-only">(current)</span></a>
+         </li>
+       </ul>
+  
+    </div>
+  </nav>

@@ -1,0 +1,28 @@
+ 
+    <!-- <div class="shop__thumb" (click)="navigateToDetails(book.id)"> -->
+    <div class="shop__thumb" [routerLink]="['/details/',book?.id]">
+      <div class="shop-thumb__img">
+        <img src="{{book?.coverImage}}" class="img-responsive" alt="...">
+      </div>
+      <h5 class="shop-thumb__title">
+        {{book?.title}}
+      </h5>
+      <div class="shop-thumb__price">
+        <span class="shop-thumb__price">Preis: {{book?.price}} {{book?.price==='Verleih'?"":"€"}}</span>
+
+      </div>
+      <div class="shop-thumb__price">
+        <span class="shop-thumb__price">Qualität: {{book?.quality}}</span>
+
+      </div>
+      <div class="shop-thumb__price">
+        <span class="shop-thumb__price">Veröffentlicht: {{book?.date}}</span>
+
+      </div>
+      <div class="shop-thumb__price">
+        <span class="shop-thumb__price">Verkäufer: {{book?.user}}</span>
+
+      </div>
+
+    </div>
+ 

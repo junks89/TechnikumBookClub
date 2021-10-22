@@ -1,0 +1,94 @@
+ <app-navbar></app-navbar>
+ <div class="container">
+
+   <div class="row">
+     <div class="col-sm-4 col-md-3">
+       <div>
+         <mat-form-field appearance="outline">
+           <mat-label>Buch suchen</mat-label>
+           <input placeholder="Buch suchen..." (input)="searchBooks($event)" matInput />
+         </mat-form-field>
+
+         <div>
+           <hr>
+           <h4 class="headline">
+            <span>Preis</span>
+          </h4>
+           <form [formGroup]="priceOptions">
+             <div>
+               <mat-radio-group formControlName="options">
+                 <div>
+                   <mat-radio-button value="1">0€ bis 25€</mat-radio-button>
+                 </div>
+                 <div>
+                   <mat-radio-button value="2">25€ bis 50€</mat-radio-button>
+                 </div>
+                 <div>
+                   <mat-radio-button value="3">50€ bis 100€</mat-radio-button>
+                 </div>
+                 <div>
+                   <mat-radio-button value="4">Alle</mat-radio-button>
+                 </div>
+               </mat-radio-group>
+             </div>
+           </form>
+         </div>
+       </div>
+
+       <hr>
+       <h4 class="headline">
+         <span>Qualität</span>
+       </h4>
+       <div>
+       
+        <form [formGroup]="qualityOptionsForm">
+          <div>
+            <mat-radio-group formControlName="qualityOptions">
+              <div>
+                <mat-radio-button value="1">Neu</mat-radio-button>
+              </div>
+              <div>
+                <mat-radio-button value="2">Neuwertig</mat-radio-button>
+              </div>
+              <div>
+                <mat-radio-button value="3">Sichtlich gebraucht</mat-radio-button>
+              </div>
+              <div>
+                <mat-radio-button value="4">Alle</mat-radio-button>
+              </div>
+            </mat-radio-group>
+          </div>
+        </form>
+      </div>
+
+
+ 
+       <div>
+        <button type="button" class="btn btn-success saveButton" placement="right"
+          (click)="search()">
+          Suchen
+        </button>
+      </div>
+
+
+     </div>
+
+
+
+
+     <div class="col-sm-8 col-md-9">
+       <div class="row">
+         <div *ngFor="let book of booksList; let i = index;" class="col-sm-6 col-md-4">
+
+           <app-bookelement key="i" [book]="book"></app-bookelement>
+         </div>
+
+       </div>
+       <div *ngIf="booksList?.length === 0" class="row">
+         <h3>Es konnten keine Bücher gefunden werden die den Suchkriterien entsprechen</h3>
+       </div>
+     </div>
+
+
+
+   </div>

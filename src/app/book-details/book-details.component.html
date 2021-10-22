@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="col-md-12">
+    <section class="panel">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="pro-img-details">
+            <img src="{{selectedBooked?.coverImage}}" alt="">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <h4 class="pro-d-title">
+            {{selectedBooked?.title}}
+          </h4>
+          <p>
+            {{selectedBooked?.description}}
+          </p>
+          <div class="product_meta">
+            <span class="posted_in"> <strong>Qualität:</strong> {{selectedBooked?.quality}}</span>
+            <span class="posted_in"> <strong>Isbn:</strong> {{selectedBooked?.isbn}}</span>
+            <span class="posted_in"> <strong>Autor:</strong> {{selectedBooked?.authors}}</span>
+            <span class="posted_in"> <strong>Verkäufer:</strong> {{selectedBooked?.user}}</span>
+          </div>
+          <div class="m-bot15"> <strong>Preis : </strong> <span class="pro-price">
+              {{selectedBooked?.price==="Verleih"? selectedBooked?.price :   selectedBooked?.price +" €"}}</span>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button mat-raised-button [routerLink]="'/overview'" color="primary">Zurück zur Übersicht</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> In den
+                Einkaufswagen</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

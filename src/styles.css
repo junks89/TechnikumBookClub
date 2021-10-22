@@ -1,1 +1,200 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+                
+body{margin-top:20px;}              
+
+body{margin-top:20px;
+  background:#eee;
+  }
+body{margin-top:20px;} 
+body {
+  background: #f5f5f5;
+  background-color:white;
+}
+ 
+.shop__thumb {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(245, 237, 237, 0.87);
+  text-align: center;
+  -webkit-transition: border-color 0.1s, -webkit-box-shadow 0.1s;
+       -o-transition: border-color 0.1s, box-shadow 0.1s;
+          transition: border-color 0.1s, box-shadow 0.1s;
+}
+.shop__thumb:hover {
+  border-color: rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.07);
+}
+.shop__thumb > a {
+  color: #333333;
+}
+.shop__thumb > a:hover {
+  text-decoration: none;
+}
+.shop-thumb__img {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.shop-thumb__title {
+  font-weight: 600;
+}
+.shop-thumb__price {
+  color: #777777;
+}
+.shop-thumb-price_old {
+  text-decoration: line-through;
+}
+.shop-thumb-price_new {
+  color: red;
+} 
+  
+.shop__filter {
+  margin-bottom: 40px;
+}
+ 
+.shop-filter__price {
+  padding: 15px;
+}
+.shop-filter__price [class*='col-'] {
+  padding: 2px;
+}  
+.m-bot15{
+  margin-bottom:15px;
+} 
+.shop-conf__heading {
+  margin-bottom: 40px;
+}
+.shop-conf__heading + p {
+  margin-bottom: 100px;
+} 
+.form-control,
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}  
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+.checkbox label {
+  padding-left: 0;
+}
+.checkbox label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #eee;
+  text-align: center;
+  font-family: "FontAwesome";
+}
+.checkbox input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+.radio label {
+  padding-left: 0;
+}
+.radio label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #eee;
+  background-color: #333333;
+}
+.radio input[type="radio"]:checked + label:before {
+  border-width: 7px;
+} 
+
+
+  
+  a {
+    cursor: pointer;
+  }
+  
+  .navbar {
+    margin-bottom: 30px;
+  } 
+  
+  .w-60 {
+    width: 60px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+  
+ 
+  
+  a {
+    color: #707070;
+  }
+  i {
+  color: white;
+  }
+  
+  a {
+  color: white;
+  }
+html, body { height: 100%; }
+  
+  /*panel*/
+  .panel {
+      border: none;
+      box-shadow: none;
+  } 
+  
+  .pro-img-details {
+      margin-left: -15px;
+  }
+  
+  .pro-img-details img {
+      width: 100%;
+  }
+  
+  .pro-d-title {
+      font-size: 16px;
+      margin-top: 0;
+  }
+  
+  .product_meta {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      margin: 15px 0;
+  }
+  
+  .product_meta span {
+      display: block;
+      margin-bottom: 10px;
+  }
+  .product_meta a, .pro-price{
+      color:#fc5959 ;
+  }
+  
+  
+ 
+ 
